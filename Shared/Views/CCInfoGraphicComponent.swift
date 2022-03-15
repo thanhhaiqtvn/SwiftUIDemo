@@ -12,8 +12,9 @@ import SwiftUI
 /// Info graphics components
 public enum CCInfoGraphicComponent {
     case separator(appearance: SUISeparatorAppearance)
-    case fullWidthImage(imageNames: [String])
-    case paddedImage(imageNames: [String], padding: SUIPadding, widthSize: CGFloat? = nil, alignment: Alignment = .top)
+    case fullWidthImage(imageName: String)
+    case paddedImage(imageName: String, padding: SUIPadding)
+    case paddedMutilImage(imageNames: [String], padding: SUIPadding, widthSize: CGFloat? = nil)
 }
 
 public enum CCInfoGraphicActionButton: String {

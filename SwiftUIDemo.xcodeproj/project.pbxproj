@@ -25,6 +25,8 @@
 		05B64D0B27DF2985003990F9 /* InfoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B64D0927DF2985003990F9 /* InfoLayout.swift */; };
 		05B64D0D27DF3065003990F9 /* SUIiOSLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B64D0C27DF3065003990F9 /* SUIiOSLibrary.xcframework */; };
 		05B64D0E27DF3065003990F9 /* SUIiOSLibrary.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05B64D0C27DF3065003990F9 /* SUIiOSLibrary.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05B64D1127DF4B08003990F9 /* CCPaddedMutilImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B64D1027DF4B08003990F9 /* CCPaddedMutilImageView.swift */; };
+		05B64D1227DF4B08003990F9 /* CCPaddedMutilImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B64D1027DF4B08003990F9 /* CCPaddedMutilImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +59,7 @@
 		05B64D0627DF296F003990F9 /* CCSeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCSeparatorView.swift; sourceTree = "<group>"; };
 		05B64D0927DF2985003990F9 /* InfoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLayout.swift; sourceTree = "<group>"; };
 		05B64D0C27DF3065003990F9 /* SUIiOSLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SUIiOSLibrary.xcframework; path = Carthage/Build/SUIiOSLibrary.xcframework; sourceTree = "<group>"; };
+		05B64D1027DF4B08003990F9 /* CCPaddedMutilImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCPaddedMutilImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				05B64CD327DF204A003990F9 /* ContentView.swift */,
+				05B64D0927DF2985003990F9 /* InfoLayout.swift */,
 				05B64D0027DF2934003990F9 /* CCInfoGraphicComponent.swift */,
 				05B64D0327DF2953003990F9 /* CCPaddedImageView.swift */,
+				05B64D1027DF4B08003990F9 /* CCPaddedMutilImageView.swift */,
 				05B64D0627DF296F003990F9 /* CCSeparatorView.swift */,
-				05B64D0927DF2985003990F9 /* InfoLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B64D1127DF4B08003990F9 /* CCPaddedMutilImageView.swift in Sources */,
 				05B64D0727DF296F003990F9 /* CCSeparatorView.swift in Sources */,
 				05B64CF427DF2683003990F9 /* AppDelegate.swift in Sources */,
 				05B64CE727DF204C003990F9 /* ContentView.swift in Sources */,
@@ -267,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B64D1227DF4B08003990F9 /* CCPaddedMutilImageView.swift in Sources */,
 				05B64D0827DF296F003990F9 /* CCSeparatorView.swift in Sources */,
 				05B64CF527DF2683003990F9 /* AppDelegate.swift in Sources */,
 				05B64CE827DF204C003990F9 /* ContentView.swift in Sources */,
@@ -331,6 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -384,6 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

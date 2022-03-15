@@ -12,7 +12,7 @@ let infoLayout = InfoLayout.layout()
 
 struct ContentView: View {
     var body: some View {
-         return ScrollView {
+        return ScrollView {
             if #available(iOS 14.0, *) {
                 LazyVStack(alignment: .leading) {
                     ForEach(Array(infoLayout.enumerated()), id: \.offset) { _, component in
@@ -37,23 +37,23 @@ struct ContentView: View {
     }
     
     func view2() -> some View {
-        return AnyView(CCPaddedImageView(imageNames: ["info.stamp.feature5", "info.stamp.feature6"],
-                                        padding: SUIPadding(leading: -20, trailing: -20)))
+        return AnyView(CCPaddedImageView(imageName: "info.header",
+                                         padding: SUIPadding(leading: -20, trailing: -20)))
     }
     
     func view(for component: CCInfoGraphicComponent) -> some View {
         switch component {
-        case .fullWidthImage(let imageNames):
-            return AnyView(CCPaddedImageView(imageNames: imageNames,
-                                             padding: SUIPadding(leading: -20, trailing: -20)))
-            
-        case .paddedImage(let imageNames, let padding, let widthSize, let alignment):
-            return AnyView(CCPaddedImageView(imageNames: imageNames,
-                                             padding: padding, widthSize: widthSize, alignment: alignment))
-            
-            
         case .separator(let appearance):
             return AnyView(CCSeparatorView(appearance: appearance))
+            
+        case .fullWidthImage(let imageNames):
+            return AnyView(CCPaddedImageView(imageName: imageNames, padding: SUIPadding(leading: -20, trailing: -20)))
+            
+        case .paddedImage(let imageName, let padding):
+            return AnyView(CCPaddedImageView(imageName: imageName, padding: padding))
+            
+        case .paddedMutilImage(imageNames: let imageNames, padding: let padding, widthSize: let widthSize):
+            return AnyView(CCPaddedMutilImageView(imageNames: imageNames, padding: padding, widthSize: widthSize))
         }
     }
 }
